@@ -1,0 +1,116 @@
+{
+  "lastUpdated": "April 2026",
+  "description": "Open and upcoming non-dilutive grants & funding for MedTech, Biotech, AI-health startups and projects. EU, DACH, CEE, USA, UK, Australia, Canada.",
+  "grants": [
+    {
+      "grantName": "Horizon Europe Cluster 1 Health - Staying Healthy",
+      "organization": "European Commission",
+      "amount": "€7M - €10M per project",
+      "deadline": "16 April 2026",
+      "eligibility": "MedTech, Biotech, AI for health, prevention of NCDs",
+      "regions": ["EU", "DACH", "CEE", "Associated countries"],
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-STAYHLTH-02",
+      "notes": "Behavioural interventions, public health, AI tools"
+    },
+    {
+      "grantName": "Horizon Europe - New Approach Methodologies (NAMs)",
+      "organization": "European Commission",
+      "amount": "€7M - €9M per project",
+      "deadline": "16 April 2026",
+      "eligibility": "Biotech, MedTech, regulatory science, alternatives to animal testing",
+      "regions": ["EU", "DACH", "CEE"],
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-TOOL-03",
+      "notes": "Integrating NAMs for biomedical research and testing"
+    },
+    {
+      "grantName": "Horizon Europe - Centres of Excellence for ATMPs",
+      "organization": "European Commission",
+      "amount": "Up to €10M",
+      "deadline": "15 April 2026",
+      "eligibility": "Advanced Therapy Medicinal Products (gene, cell therapy)",
+      "regions": ["EU", "DACH", "CEE"],
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-TOOL-07",
+      "notes": "Network of excellence for advanced therapies"
+    },
+    {
+      "grantName": "NHMRC-Horizon Europe 2026",
+      "organization": "NHMRC (Australia) + EU",
+      "amount": "Varies (co-funding)",
+      "deadline": "Ongoing / aligned with Horizon calls",
+      "eligibility": "Australian entities partnering with EU consortia in health",
+      "regions": ["Australia", "EU"],
+      "link": "https://www.nhmrc.gov.au/funding/find-funding/nhmrc-horizon-europe-2026",
+      "notes": "Supports Australian participation in Horizon Europe Health calls"
+    },
+    {
+      "grantName": "UKRI Horizon Europe Guarantee",
+      "organization": "UK Research and Innovation",
+      "amount": "Varies",
+      "deadline": "Aligned with Horizon Europe deadlines",
+      "eligibility": "UK entities in Horizon Europe calls",
+      "regions": ["UK"],
+      "link": "https://www.ukri.org/opportunity/",
+      "notes": "UK guarantee funding for Horizon Europe participants"
+    },
+    {
+      "grantName": "BARDA Broad Agency Announcement",
+      "organization": "US Biomedical Advanced Research and Development Authority",
+      "amount": "$1M - $20M+",
+      "deadline": "Rolling until Dec 2026",
+      "eligibility": "MedTech, Biotech, countermeasures for health security",
+      "regions": ["USA", "International"],
+      "link": "https://www.medicalcountermeasures.gov/",
+      "notes": "Non-dilutive funding for medical countermeasures"
+    },
+    {
+      "grantName": "CDMRP FY26 Programs",
+      "organization": "US Department of Defense",
+      "amount": "$385K - $20M+",
+      "deadline": "Varies per program (2026 cycle)",
+      "eligibility": "Medical research, cancer, TBI, psychological health",
+      "regions": ["USA", "International partners"],
+      "link": "https://cdmrp.health.mil/",
+      "notes": "Congressionally Directed Medical Research Programs"
+    },
+    {
+      "grantName": "NRC IRAP Industrial Research Assistance",
+      "organization": "National Research Council Canada",
+      "amount": "Varies",
+      "deadline": "Rolling",
+      "eligibility": "Canadian SMEs in MedTech/Biotech",
+      "regions": ["Canada"],
+      "link": "https://nrc.canada.ca/en/support-technology-innovation",
+      "notes": "Advisory + funding for experimental development"
+    },
+    {
+      "grantName": "AusIndustry Economic Accelerator Ignite",
+      "organization": "Australian Government",
+      "amount": "Up to $500,000",
+      "deadline": "Round 2 open (2026)",
+      "eligibility": "University-linked MedTech projects",
+      "regions": ["Australia"],
+      "link": "https://www.industry.gov.au/",
+      "notes": "Proof-of-concept grants for MedTech"
+    },
+    {
+      "grantName": "BMBF German Federal Ministry Grants",
+      "organization": "BMBF (Germany)",
+      "amount": "Varies (€500K - €5M+)",
+      "deadline": "Multiple calls 2026",
+      "eligibility": "DACH MedTech/Biotech projects",
+      "regions": ["DACH", "Germany"],
+      "link": "https://www.bmbf.de/",
+      "notes": "Innovation funding for health technologies"
+    },
+    {
+      "grantName": "Horizon Europe - Regulatory Science for Health Technologies",
+      "organization": "European Commission",
+      "amount": "€5M - €10M",
+      "deadline": "16 April 2026",
+      "eligibility": "Patient-centred health technologies",
+      "regions": ["EU", "DACH", "CEE"],
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-IND-03",
+      "notes": "Translational development support"
+    }
+  ]
+}

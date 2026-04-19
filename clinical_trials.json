@@ -1,0 +1,104 @@
+{
+  "lastUpdated": "April 2026",
+  "description": "Clinical Trial Databases and key resources for MedTech, Biotech, AI-health, and related fields. Includes live sources for thousands of trials.",
+  "databases": [
+    {
+      "databaseName": "ClinicalTrials.gov",
+      "organization": "U.S. National Library of Medicine (NIH)",
+      "focus": "All clinical trials (drugs, devices, biologics, behavioral)",
+      "size": "Over 500,000 trials worldwide",
+      "keyFeatures": [
+        "Advanced search by condition, intervention, sponsor, phase, location",
+        "Results database with outcomes",
+        "API available for integration"
+      ],
+      "website": "https://clinicaltrials.gov",
+      "api": "https://clinicaltrials.gov/api",
+      "regions": ["Global", "USA", "International"],
+      "notes": "Largest public clinical trial registry. Essential for benchmarking and competitor analysis."
+    },
+    {
+      "databaseName": "EU Clinical Trials Register (EudraCT)",
+      "organization": "European Medicines Agency (EMA)",
+      "focus": "Clinical trials in the European Union and EEA",
+      "size": "Tens of thousands of trials",
+      "keyFeatures": [
+        "Search by sponsor, condition, medicinal product",
+        "Paediatric trials database",
+        "Public results summary"
+      ],
+      "website": "https://www.clinicaltrialsregister.eu",
+      "api": "Limited public API",
+      "regions": ["EU", "DACH", "CEE", "UK"],
+      "notes": "Mandatory for all EU clinical trials. Strong focus on transparency."
+    },
+    {
+      "databaseName": "Australian New Zealand Clinical Trials Registry (ANZCTR)",
+      "organization": "NHMRC Clinical Trials Centre",
+      "focus": "Clinical trials in Australia and New Zealand",
+      "size": "Over 25,000 registered trials",
+      "keyFeatures": [
+        "Search by intervention, condition, sponsor",
+        "WHO ICTRP compliant"
+      ],
+      "website": "https://www.anzctr.org.au",
+      "api": "Available via WHO ICTRP",
+      "regions": ["Australia", "New Zealand"],
+      "notes": "Primary registry for Australian MedTech and Biotech trials."
+    },
+    {
+      "databaseName": "WHO International Clinical Trials Registry Platform (ICTRP)",
+      "organization": "World Health Organization",
+      "focus": "Global aggregation of clinical trials",
+      "size": "Aggregates data from 20+ registries (hundreds of thousands)",
+      "keyFeatures": [
+        "Unified search across multiple national registries",
+        "Standardized data fields"
+      ],
+      "website": "https://trialsearch.who.int",
+      "api": "Yes",
+      "regions": ["Global"],
+      "notes": "Best source for international comparison and CEE/DACH trials."
+    },
+    {
+      "databaseName": "Health Canada Clinical Trials Database",
+      "organization": "Health Canada",
+      "focus": "Clinical trials authorized in Canada",
+      "size": "Thousands of trials",
+      "keyFeatures": [
+        "Search by drug name, sponsor, protocol number"
+      ],
+      "website": "https://clinicaltrials.canada.ca",
+      "api": "Limited",
+      "regions": ["Canada"],
+      "notes": "Official Canadian registry."
+    },
+    {
+      "databaseName": "ISRCTN Registry",
+      "organization": "BMC / Springer Nature",
+      "focus": "Randomised controlled trials (global)",
+      "size": "Over 30,000 trials",
+      "keyFeatures": [
+        "Strong focus on transparency and results reporting"
+      ],
+      "website": "https://www.isrctn.com",
+      "api": "Yes",
+      "regions": ["Global", "UK", "EU"],
+      "notes": "Widely used in UK and Europe."
+    },
+    {
+      "databaseName": "ClinicalTrialsRegister.eu",
+      "organization": "EMA",
+      "focus": "EU Clinical Trials Information System (CTIS)",
+      "size": "All EU/EEA trials since 2022",
+      "keyFeatures": [
+        "Publicly accessible database with results"
+      ],
+      "website": "https://www.clinicaltrialsregister.eu",
+      "api": "Limited",
+      "regions": ["EU", "DACH", "CEE"],
+      "notes": "Replaced EudraCT for new trials."
+    }
+  ],
+  "integrationNotes": "Your app can use the ClinicalTrials.gov API and WHO ICTRP for real-time search and filtering. For best performance, cache recent results and allow users to filter by phase, condition, sponsor, and location."
+}

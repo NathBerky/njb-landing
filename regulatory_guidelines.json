@@ -1,0 +1,112 @@
+{
+  "lastUpdated": "April 2026",
+  "description": "Key regulatory bodies and current guidelines for MedTech, Biotech, SaMD, and AI-health products in major markets.",
+  "regulatoryBodies": [
+    {
+      "authority": "FDA (U.S. Food and Drug Administration)",
+      "region": "USA",
+      "focus": "Medical devices, SaMD, IVD, combination products",
+      "keyGuidelines": [
+        "Digital Health Software Precertification Program",
+        "AI/ML-Based SaMD Action Plan",
+        "510(k) Premarket Notification",
+        "De Novo Classification Request",
+        "Breakthrough Devices Program"
+      ],
+      "website": "https://www.fda.gov/medical-devices",
+      "contact": "Via FDA website / CDRH",
+      "notes": "Most active regulator for AI/ML in medical devices. Fast-track options available."
+    },
+    {
+      "authority": "European Medicines Agency (EMA)",
+      "region": "EU / DACH / CEE",
+      "focus": "Advanced Therapy Medicinal Products (ATMPs), biotech drugs",
+      "keyGuidelines": [
+        "MDR (Medical Device Regulation) 2017/745",
+        "IVDR (In Vitro Diagnostic Regulation) 2017/746",
+        "AI in Medical Devices reflection paper",
+        "Guideline on computerised systems"
+      ],
+      "website": "https://www.ema.europa.eu",
+      "contact": "Via national competent authorities",
+      "notes": "Strict post-market surveillance requirements"
+    },
+    {
+      "authority": "Swissmedic",
+      "region": "Switzerland (DACH)",
+      "focus": "Medical devices, biotech, SaMD",
+      "keyGuidelines": [
+        "Swiss Medical Device Ordinance (MedDO)",
+        "Mutual Recognition Agreement with EU",
+        "AI applications in medical devices"
+      ],
+      "website": "https://www.swissmedic.ch",
+      "contact": "Via Swissmedic portal",
+      "notes": "Often aligns with EU MDR but with faster approval paths"
+    },
+    {
+      "authority": "TGA (Therapeutic Goods Administration)",
+      "region": "Australia",
+      "focus": "Medical devices, IVD, software as medical device",
+      "keyGuidelines": [
+        "Australian Regulatory Guidelines for Medical Devices (ARGMD)",
+        "Software as a Medical Device (SaMD) framework",
+        "AI/ML in medical devices guidance"
+      ],
+      "website": "https://www.tga.gov.au",
+      "contact": "Via TGA Business Services",
+      "notes": "Harmonized with EU MDR and IMDRF principles"
+    },
+    {
+      "authority": "Health Canada",
+      "region": "Canada",
+      "focus": "Medical devices, SaMD, biotech",
+      "keyGuidelines": [
+        "Medical Devices Regulations",
+        "Software as a Medical Device guidance",
+        "AI/ML-based medical devices guidance"
+      ],
+      "website": "https://www.canada.ca/en/health-canada.html",
+      "contact": "Via Health Canada portal",
+      "notes": "Strong focus on post-market surveillance"
+    },
+    {
+      "authority": "MHRA (Medicines and Healthcare products Regulatory Agency)",
+      "region": "UK",
+      "focus": "Medical devices, SaMD, AI",
+      "keyGuidelines": [
+        "UK MDR 2002 (as amended)",
+        "AI Airlock regulatory sandbox",
+        "Software and AI as a Medical Device change programme"
+      ],
+      "website": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+      "contact": "Via MHRA portal",
+      "notes": "Innovative sandbox approach for AI/ML devices"
+    },
+    {
+      "authority": "Notified Bodies (EU)",
+      "region": "EU / DACH / CEE",
+      "focus": "Conformity assessment under MDR/IVDR",
+      "keyGuidelines": [
+        "MDR Annex IX, X, XI",
+        "Common Specifications",
+        "MDCG guidance documents"
+      ],
+      "website": "Varies by body (e.g. TÜV, BSI, DEKRA)",
+      "contact": "Direct with chosen Notified Body",
+      "notes": "Required for CE marking in Europe"
+    },
+    {
+      "authority": "AEMPS (Spain) / AGES (Austria) / BfArM (Germany)",
+      "region": "DACH / CEE / EU",
+      "focus": "National competent authorities",
+      "keyGuidelines": [
+        "National implementations of MDR/IVDR",
+        "Clinical investigation guidance"
+      ],
+      "website": "Varies by country",
+      "contact": "National portals",
+      "notes": "Handle vigilance and market surveillance"
+    }
+  ]
+}

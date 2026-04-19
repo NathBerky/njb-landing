@@ -1,0 +1,156 @@
+{
+  "lastUpdated": "April 2026",
+  "description": "Notable successful exits and acquisitions in MedTech, Biotech, and AI-health (2023–2026). Great examples for success stories and motivation in your app.",
+  "exits": [
+    {
+      "companyName": "HeartFlow",
+      "acquirer": "IPO (Nasdaq: HFLO)",
+      "dealValue": "$1.2B+ valuation at IPO",
+      "year": "2025",
+      "product": "AI coronary CTA analysis software",
+      "market": "Cardiovascular diagnostics",
+      "country": "USA",
+      "notes": "One of the largest MedTech AI IPOs in recent years"
+    },
+    {
+      "companyName": "Hinge Health",
+      "acquirer": "IPO trajectory",
+      "dealValue": "Multi-billion valuation",
+      "year": "2025",
+      "product": "Digital musculoskeletal therapy platform",
+      "market": "Digital health / MedTech",
+      "country": "USA",
+      "notes": "Strong investor interest in non-opioid pain management"
+    },
+    {
+      "companyName": "Viz.ai",
+      "acquirer": "Strategic acquisition interest",
+      "dealValue": "$1.2B+ valuation",
+      "year": "2025",
+      "product": "AI stroke detection platform",
+      "market": "AI clinical workflow",
+      "country": "USA",
+      "notes": "Pioneer in AI-powered stroke care coordination"
+    },
+    {
+      "companyName": "Abridge",
+      "acquirer": "High-growth valuation",
+      "dealValue": "$5.3B+ valuation",
+      "year": "2025",
+      "product": "AI medical scribe",
+      "market": "AI clinical documentation",
+      "country": "USA",
+      "notes": "One of the fastest-growing AI healthcare companies"
+    },
+    {
+      "companyName": "Tempus",
+      "acquirer": "IPO",
+      "dealValue": "Multi-billion valuation",
+      "year": "2024",
+      "product": "AI precision oncology platform",
+      "market": "Oncology data & AI",
+      "country": "USA",
+      "notes": "Major player in data-driven cancer care"
+    },
+    {
+      "companyName": "Synchron",
+      "acquirer": "Strategic partnership / funding",
+      "dealValue": "High valuation",
+      "year": "2025",
+      "product": "Brain-computer interface",
+      "market": "Neurotech",
+      "country": "USA / Australia",
+      "notes": "Leading BCI company with clinical progress"
+    },
+    {
+      "companyName": "Sword Health",
+      "acquirer": "Unicorn status",
+      "dealValue": "~$4B+ valuation",
+      "year": "2024",
+      "product": "AI digital therapy",
+      "market": "Digital health",
+      "country": "Portugal / USA",
+      "notes": "Strong European success story"
+    },
+    {
+      "companyName": "CMR Surgical",
+      "acquirer": "Strategic funding",
+      "dealValue": "$200M+ total funding",
+      "year": "2025",
+      "product": "Versius robotic surgery system",
+      "market": "Surgical robotics",
+      "country": "UK",
+      "notes": "European robotics leader"
+    },
+    {
+      "companyName": "Owkin",
+      "acquirer": "Strategic partnership with Sanofi",
+      "dealValue": "Significant",
+      "year": "2024",
+      "product": "AI for drug discovery",
+      "market": "AI biotech",
+      "country": "France / USA",
+      "notes": "AI-drug discovery success"
+    },
+    {
+      "companyName": "HistoSonics",
+      "acquirer": "Strategic investment",
+      "dealValue": "$250M+",
+      "year": "2025",
+      "product": "Histotripsy non-invasive tumor treatment",
+      "market": "MedTech oncology",
+      "country": "USA",
+      "notes": "Innovative non-invasive therapy"
+    },
+    {
+      "companyName": "Vial",
+      "acquirer": "Series C+",
+      "dealValue": "Significant",
+      "year": "2025",
+      "product": "AI clinical trial platform",
+      "market": "Clinical trials",
+      "country": "USA",
+      "notes": "Modernizing clinical research"
+    },
+    {
+      "companyName": "Neko Health",
+      "acquirer": "High valuation round",
+      "dealValue": "$1.8B+",
+      "year": "2025",
+      "product": "Whole-body health scanning",
+      "market": "Preventive health",
+      "country": "Sweden",
+      "notes": "Preventive health success story"
+    },
+    {
+      "companyName": "Insilico Medicine",
+      "acquirer": "Multiple partnerships",
+      "dealValue": "$479M+ total",
+      "year": "2024-2025",
+      "product": "AI drug discovery",
+      "market": "AI biotech",
+      "country": "USA / Hong Kong",
+      "notes": "AI-generated drug candidates in clinic"
+    },
+    {
+      "companyName": "Paige",
+      "acquirer": "Strategic growth",
+      "dealValue": "$410M+",
+      "year": "2024",
+      "product": "AI digital pathology",
+      "market": "AI diagnostics",
+      "country": "USA",
+      "notes": "Pathology AI leader"
+    },
+    {
+      "companyName": "Caris Life Sciences",
+      "acquirer": "IPO",
+      "dealValue": "High valuation",
+      "year": "2025",
+      "product": "AI precision oncology",
+      "market": "Oncology",
+      "country": "USA",
+      "notes": "Molecular profiling + AI"
+    }
+  ]
+}
