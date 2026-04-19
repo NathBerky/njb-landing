@@ -1,0 +1,124 @@
+{
+  "appName": "Startup Navigator",
+  "version": "2026 Clean Edition",
+  "style": "Text-only, professional, no icons",
+  "leftSidebar": [
+    "Health Score",
+    "Pitch Readiness",
+    "Technical Readiness",
+    "Regulatory Crystal Ball",
+    "Investor Mind Reader",
+    "Failure Predictor",
+    "Clinical Trial Oracle",
+    "Team Chemistry Simulator",
+    "Exit Maximizer",
+    "Future Self Advisor",
+    "Notes & Tasks",
+    "Startup Connect"
+  ],
+  "rightGridLayout": "3x4 square cards with function names only",
+  "functions": [
+    {
+      "name": "Health Score",
+      "userFlow": [
+        "User clicks 'Health Score' in left sidebar",
+        "Clean form appears with 5 fields: Startup Name, Sector, Stage, Target Markets, Short Description",
+        "Big green button: Calculate Health Score",
+        "Loading under 20 seconds",
+        "Result shows large score number + breakdown bars + key insights",
+        "Buttons: View 12-Month Roadmap | Improve My Score"
+      ]
+    },
+    {
+      "name": "Pitch Readiness",
+      "userFlow": [
+        "User clicks 'Pitch Readiness'",
+        "Large drag-and-drop area for PDF or PPTX",
+        "Button: Analyze My Pitch",
+        "Loading under 30 seconds",
+        "Result: Overall score + slide-by-slide feedback + predicted funding probability",
+        "Button: Fix & Improve Pitch"
+      ]
+    },
+    {
+      "name": "Technical Readiness",
+      "userFlow": [
+        "User clicks 'Technical Readiness'",
+        "Option to upload documents or fill quick form",
+        "Button: Analyze Technology",
+        "Loading under 25 seconds",
+        "Result: TRL score + risk analysis + recommended next steps"
+      ]
+    },
+    {
+      "name": "Regulatory Crystal Ball",
+      "userFlow": [
+        "User clicks 'Regulatory Crystal Ball'",
+        "Select target countries + product type",
+        "Button: Predict Approval Path",
+        "Loading under 20 seconds",
+        "Result: Country-by-country probability + missing documents checklist"
+      ]
+    },
+    {
+      "name": "Investor Mind Reader",
+      "userFlow": [
+        "User clicks 'Investor Mind Reader'",
+        "Search or select investor",
+        "Optional: upload pitch deck",
+        "Button: Analyze Investor Fit",
+        "Result: Personalized advice + predicted questions + win probability"
+      ]
+    },
+    {
+      "name": "Failure Predictor",
+      "userFlow": [
+        "User clicks 'Failure Predictor'",
+        "Uses existing Health Score data",
+        "Button: Run Risk Analysis",
+        "Loading under 20 seconds",
+        "Result: Top 5 failure risks with probability + prevention steps"
+      ]
+    },
+    {
+      "name": "Clinical Trial Oracle",
+      "userFlow": [
+        "User clicks 'Clinical Trial Oracle'",
+        "Enter protocol summary or upload document",
+        "Button: Predict Trial Outcome",
+        "Loading under 25 seconds",
+        "Result: Success probability + timeline + cost estimate + recommendations"
+      ]
+    },
+    {
+      "name": "Team Chemistry Simulator",
+      "userFlow": [
+        "User clicks 'Team Chemistry Simulator'",
+        "Current team overview + new candidate info",
+        "Button: Simulate Team Fit",
+        "Loading under 20 seconds",
+        "Result: Fit score + predicted conflicts + onboarding plan"
+      ]
+    },
+    {
+      "name": "Exit Maximizer",
+      "userFlow": [
+        "User clicks 'Exit Maximizer'",
+        "Current financials + stage",
+        "Button: Simulate Exit Paths",
+        "Loading under 25 seconds",
+        "Result: Best exit strategy + timeline + valuation forecast"
+      ]
+    },
+    {
+      "name": "Future Self Advisor",
+      "userFlow": [
+        "User clicks 'Future Self Advisor'",
+        "Type any question in the box",
+        "Button: Ask My Future Self",
+        "Loading under 20 seconds",
+        "Result: Answer from your successful company 2 years in the future"
+      ]
+    }
+  ]
+}
