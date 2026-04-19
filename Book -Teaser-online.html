@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building a Startup Team That Gives a Shit — N.J. Berky</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00D4E8;
+    --yellow: #FFE135;
+    --purple: #9B59FF;
+    --navy: #0D1020;
+    --white: #F8F6F0;
+    --coral: #FF5C5C;
+    --green: #00FF9D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    background: var(--cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(0,0,0,0.03) 40px,
+      rgba(0,0,0,0.03) 41px
+    );
+  }
+
+  .cover-badge {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--navy);
+    line-height: 1;
+    z-index: 10;
+  }
+
+  .cover-badge span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--coral);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .cover-tag {
+    background: var(--yellow);
+    color: var(--navy);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .cover h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 10vw, 110px);
+    line-height: 0.9;
+    color: var(--navy);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .cover h1 .highlight-green {
+    display: block;
+    background: var(--green);
+    padding: 4px 16px;
+    transform: rotate(-1deg);
+    margin: 8px 0;
+    display: inline-block;
+  }
+
+  .cover h1 .highlight-purple {
+    background: var(--purple);
+    color: var(--yellow);
+    padding: 4px 16px;
+    display: inline-block;
+    transform: rotate(0.5deg);
+  }
+
+  .cover-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--navy);
+    opacity: 0.7;
+    margin-top: 24px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .cover-author {
+    margin-top: 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .cover-weWork {
+    margin-top: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--navy);
+    opacity: 0.6;
+    z-index: 2;
+  }
+
+  /* ── SCROLLING TICKER ── */
+  .ticker-wrap {
+    overflow: hidden;
+    background: var(--yellow);
+    padding: 10px 0;
+    white-space: nowrap;
+  }
+
+  .ticker {
+    display: inline-block;
+    animation: ticker 18s linear infinite;
+  }
+
+  .ticker span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    margin: 0 28px;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 32px;
+  }
+
+  .section + .section {
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  /* ── CHAPTER LABELS ── */
+  .chapter-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chapter-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0,212,232,0.25);
+  }
+
+  /* ── HEADINGS ── */
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  h2 .accent { color: var(--cyan); }
+  h2 .accent-y { color: var(--yellow); }
+  h2 .accent-p { color: var(--purple); }
+  h2 .accent-g { color: var(--green); }
+  h2 .accent-r { color: var(--coral); }
+
+  h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    color: var(--yellow);
+    margin: 40px 0 12px;
+  }
+
+  p {
+    color: rgba(248,246,240,0.82);
+    margin-bottom: 18px;
+  }
+
+  /* ── CALLOUTS ── */
+  .callout {
+    border-left: 4px solid var(--cyan);
+    background: rgba(0,212,232,0.07);
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .callout.yellow { border-color: var(--yellow); background: rgba(255,225,53,0.06); }
+  .callout.purple { border-color: var(--purple); background: rgba(155,89,255,0.06); }
+  .callout.coral  { border-color: var(--coral);  background: rgba(255,92,92,0.06); }
+  .callout.green  { border-color: var(--green);  background: rgba(0,255,157,0.06); }
+
+  .callout strong {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0.6;
+  }
+
+  .callout p {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--white);
+  }
+
+  /* ── BIG QUOTE ── */
+  .big-quote {
+    text-align: center;
+    padding: 60px 32px;
+    background: linear-gradient(135deg, rgba(0,212,232,0.08), rgba(155,89,255,0.08));
+    margin: 0;
+  }
+
+  .big-quote blockquote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.1;
+    color: var(--white);
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+
+  .big-quote cite {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--cyan);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── STAT GRID ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--yellow);
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── LIST ── */
+  .check-list {
+    list-style: none;
+    margin: 20px 0 28px;
+  }
+
+  .check-list li {
+    padding: 10px 0 10px 36px;
+    position: relative;
+    color: rgba(248,246,240,0.82);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .check-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+  }
+
+  .check-list li.bad::before { content: '✗'; color: var(--coral); }
+  .check-list li.good::before { content: '✓'; color: var(--green); }
+
+  /* ── RED FLAG / GREEN FLAG ── */
+  .flag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  @media (max-width: 600px) {
+    .flag-grid { grid-template-columns: 1fr; }
+  }
+
+  .flag-box {
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .flag-box.red { background: rgba(255,92,92,0.1); border: 1px solid rgba(255,92,92,0.3); }
+  .flag-box.green { background: rgba(0,255,157,0.06); border: 1px solid rgba(0,255,157,0.25); }
+
+  .flag-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .flag-box.red .flag-title { color: var(--coral); }
+  .flag-box.green .flag-title { color: var(--green); }
+
+  .flag-box ul {
+    list-style: none;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .flag-box ul li { padding: 4px 0; }
+  .flag-box.red ul li::before { content: '🚩 '; }
+  .flag-box.green ul li::before { content: '✅ '; }
+
+  /* ── CHAPTER DIVIDER ── */
+  .ch-divider {
+    background: var(--cyan);
+    padding: 60px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ch-divider::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(0,0,0,0.04) 60px,
+      rgba(0,0,0,0.04) 61px
+    );
+  }
+
+  .ch-divider .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    line-height: 1;
+  }
+
+  .ch-divider .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--navy);
+    opacity: 0.6;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+  }
+
+  .ch-divider h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 68px);
+    color: var(--navy);
+    z-index: 1;
+    position: relative;
+    line-height: 1;
+  }
+
+  /* ── TOOL BOX ── */
+  .tool-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0,212,232,0.2);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 28px 0;
+  }
+
+  .tool-box .tool-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .tool-box p { font-size: 15px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: black;
+    padding: 60px 32px;
+    text-align: center;
+  }
+
+  footer .footer-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--cyan);
+    margin-bottom: 8px;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    max-width: 400px;
+    margin: 0 auto 6px;
+  }
+
+  footer a {
+    color: var(--yellow);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+  }
+
+  /* ── INLINE EMPHASIS ── */
+  em { color: var(--cyan); font-style: normal; font-weight: 600; }
+  strong { color: var(--white); }
+  .mono { font-family: 'Space Mono', monospace; font-size: 0.9em; color: var(--yellow); }
+
+  /* ── WEWORK STAMP ── */
+  .wework-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin: 24px 0;
+  }
+
+  .wework-stamp .dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  /* ── PAGE BREAK HINT (for print) ── */
+  @media print {
+    .cover, .ch-divider { page-break-after: always; }
+    body { background: white; color: black; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-badge">N.J.<br>BERKY<span>STARTUP</span></div>
+  <div class="cover-tag">The Startup Team Playbook</div>
+  <h1>
+    BUILDING<br>
+    <span class="highlight-green">STARTUP</span><br>
+    TEAM<br>
+    <span class="highlight-purple">That Gives a Shit</span>
+  </h1>
+  <div class="cover-subtitle">// hire leaders, not followers //</div>
+  <div class="cover-author">N.J. Berky</div>
+  <div class="cover-weWork">Written at WeWork, fuelled by chai lattes ☕</div>
+</div>
+
+<!-- ══════════════ TICKER ══════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>HIRE LEADERS</span><span>NOT FOLLOWERS</span><span>BUILD DIFFERENT</span><span>CULTURE EATS STRATEGY</span><span>HIRE LEADERS</span><span>NOT FOLLOWERS</span><span>BUILD DIFFERENT</span><span>CULTURE EATS STRATEGY</span><span>HIRE LEADERS</span><span>NOT FOLLOWERS</span><span>BUILD DIFFERENT</span><span>CULTURE EATS STRATEGY</span><span>HIRE LEADERS</span><span>NOT FOLLOWERS</span><span>BUILD DIFFERENT</span><span>CULTURE EATS STRATEGY</span>
+  </div>
+</div>
+
+<!-- ══════════════ INTRO / WHO TF IS THIS FOR ══════════════ -->
+<div class="section">
+  <div class="chapter-label">Intro — Read This First</div>
+  <h2><span class="accent">Who The Hell</span><br>Is This Book For?</h2>
+
+  <p>If you're reading this in a WeWork at 7am, flat white getting cold, deck open on one screen and Slack blowing up on the other — this book is for you.</p>
+
+  <p>If you just hired your third person and somehow your vibe is already off — this book is for you.</p>
+
+  <p>If you've been burned by someone who interviewed like a 10 but performed like a 3 — <em>definitely</em> this book is for you.</p>
+
+  <div class="callout">
+    <strong>The core idea</strong>
+    <p>"The single biggest leverage point in any early-stage startup is who you put in the room. Not the product. Not the pitch deck. The people."</p>
+  </div>
+
+  <p>Most startup founders obsess over product-market fit. Which is valid. But they completely fumble the other thing: <em>team-market fit</em>. The right people in the wrong setup will destroy your runway faster than a pivot gone wrong.</p>
+
+  <p>This book won't give you 47-step hiring frameworks. It'll give you the mental models, the red flags, the rituals, and the raw truth about building a team that shows up like they own the place — because in the best cases, they kind of do.</p>
+
+  <div class="wework-stamp">
+    <div class="dot"></div>
+    Written across 6 cities, 4 time zones, and too many hot desks to count
+  </div>
+</div>
+
+<!-- ══════════════ CHAPTER 1 ══════════════ -->
+<div class="ch-divider">
+  <div class="num">01</div>
+  <div class="label">Chapter One</div>
+  <h2>Followers<br>Won't<br>Save You</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 01 — The Problem</div>
+  <h2>You Don't Have<br>a <span class="accent-y">Hiring Problem</span>.<br>You Have a<br><span class="accent-r">Thinking Problem</span>.</h2>
+
+  <p>Here's what founders actually do when they hire: they look for someone who will execute what they're told, who won't push back too hard, who'll grind without needing too much direction.</p>
+
+  <p>They're building an army of followers. And they call it "culture fit."</p>
+
+  <p>That is a catastrophically bad idea.</p>
+
+  <div class="callout yellow">
+    <strong>Real Talk</strong>
+    <p>A follower will do what you say. A leader will do what needs to be done — including telling you when you're wrong. Guess which one builds a company.</p>
+  </div>
+
+  <h3>The Startup Illusion</h3>
+  <p>There's this romantic myth that the founder is the genius and the team is the execution layer. Steve Jobs did it. Elon does it. So naturally, every 25-year-old with a SaaS idea thinks the same model applies to them.</p>
+
+  <p>It doesn't. Jobs had decades of pattern-matching and an insane taste filter. Elon has an engineering PhD and a physics-first brain. What most founders have is <em>conviction and a Figma file</em>. That's not nothing. But it means you need people around you who are genuinely smarter than you in key areas — and who'll fight for better answers.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-number">65%</div>
+      <div class="stat-label">of startups fail due to team issues, not product failure</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">3x</div>
+      <div class="stat-label">faster growth when first 10 hires include 2+ independent thinkers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">$240K</div>
+      <div class="stat-label">average cost of a bad senior hire when you factor in lost momentum</div>
+    </div>
+  </div>
+
+  <h3>What A Leader Actually Looks Like</h3>
+  <p>Not the loudest person in the room. Not the one who drops "paradigm shift" in every meeting. A leader in your startup context is someone who:</p>
+
+  <ul class="check-list">
+    <li>Owns outcomes, not just tasks</li>
+    <li>Notices problems before you do and brings solutions</li>
+    <li>Disagrees with you — respectfully, and with receipts</li>
+    <li>Makes decisions in the absence of your input</li>
+    <li>Elevates everyone else's game just by being in the building</li>
+  </ul>
+
+  <div class="callout green">
+    <strong>The Litmus Test</strong>
+    <p>Would this person start something themselves someday? If yes: hire. If not: think carefully about what role you're actually filling.</p>
+  </div>
+</div>
+
+<!-- ══════════════ CHAPTER 2 ══════════════ -->
+<div class="ch-divider" style="background: var(--purple);">
+  <div class="num">02</div>
+  <div class="label">Chapter Two</div>
+  <h2>The First<br>Five Hires<br>Are Everything</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 02 — First Hires</div>
+  <h2>Hire Slow.<br><span class="accent-p">Regret Less.</span><br>Ship Faster.</h2>
+
+  <p>Everyone says "hire slow, fire fast." Almost nobody does it. Because when you're pre-Series A, every week without that head of growth or that senior engineer feels like you're bleeding out.</p>
+
+  <p>I get it. I've been there. Three cities, two laptops, a Notion board that looked like a conspiracy wall. The pressure to fill seats is real.</p>
+
+  <p>But here's the brutal math: your first five non-founder hires will define the next three years of your company's culture, velocity, and talent bar. Not your product roadmap. Not your funding round. Those five people.</p>
+
+  <h3>The Founding Team Energy Problem</h3>
+  <p>Founders have a specific energy — manic, obsessive, slightly chaotic in a productive way. When you hire people, you're looking for that same energy encoded differently. Not clones. Different instruments playing the same genre.</p>
+
+  <div class="callout">
+    <strong>The Genre Test</strong>
+    <p>Imagine your company is a band. What genre are you? Indie? Punk? Jazz? Your first hires need to play that genre fluently — even if they play completely different instruments than you do.</p>
+  </div>
+
+  <h3>The 5 Archetypes You Actually Need</h3>
+
+  <div class="flag-grid" style="grid-template-columns: 1fr; gap: 12px;">
+    <div class="tool-box">
+      <div class="tool-title">Archetype 01 — The Builder</div>
+      <p>Makes things. Ships things. Doesn't wait for perfect specs. Finishes. You'll feel this energy in the first 20 minutes of an interview — they'll be sketching solutions before you've finished the question.</p>
+    </div>
+    <div class="tool-box">
+      <div class="tool-title">Archetype 02 — The Connector</div>
+      <p>Knows people, moves rooms, opens doors. They know the podcast host, the investor's EA, the journalist. Relationships are their product. Priceless in early-stage when distribution > product quality.</p>
+    </div>
+    <div class="tool-box">
+      <div class="tool-title">Archetype 03 — The Challenger</div>
+      <p>Disagrees. Constructively, professionally — but consistently. They'll save you from your worst decisions. You'll be annoyed by them approximately twice a week. That's the point.</p>
+    </div>
+    <div class="tool-box">
+      <div class="tool-title">Archetype 04 — The Operator</div>
+      <p>Loves process without being attached to bureaucracy. Makes the trains run on time. Turns chaos into repeatability. Without them, you'll be reinventing every sprint, every time.</p>
+    </div>
+    <div class="tool-box">
+      <div class="tool-title">Archetype 05 — The Evangelist</div>
+      <p>Believes in the mission like it's religious. Recruits your next ten hires at a bar on a Tuesday. Makes customers feel like they're joining a movement. Culture multiplier. Handle with care.</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 32px;">You won't get five separate people who each fit exactly one box. That's fine. Look for people who blend two of these archetypes. If someone is Builder + Challenger? You've hit the jackpot. Hire immediately, worry about the comp package later.</p>
+</div>
+
+<!-- ══════════════ BIG QUOTE ══════════════ -->
+<div class="big-quote">
+  <blockquote>"A-players hire A-players. B-players hire C-players. And C-players hire people who make everyone look competent by comparison."</blockquote>
+  <cite>— The most important thing nobody tells you</cite>
+</div>
+
+<!-- ══════════════ CHAPTER 3 ══════════════ -->
+<div class="ch-divider" style="background: var(--yellow);">
+  <div class="num">03</div>
+  <div class="label">Chapter Three</div>
+  <h2>Interviews<br>Are<br>Theatre</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 03 — The Interview Problem</div>
+  <h2>Stop Asking<br><span class="accent-y">"Where Do You See</span><br><span class="accent-y">Yourself in 5 Years"</span></h2>
+
+  <p>Interviews are broken. You both know it. The candidate has rehearsed their STAR method answers. You've got a list of questions from a Medium article called "Top 20 Interview Questions for Startups." And somehow you spend 45 minutes performing competence at each other and call it hiring.</p>
+
+  <p>The person you hire based on that? Is not the person who shows up to work on Monday.</p>
+
+  <h3>What Actually Works</h3>
+
+  <div class="callout coral">
+    <strong>The Uncomfortable Truth</strong>
+    <p>The best signal you'll ever get from a candidate comes from watching them work, not from watching them talk about how they work.</p>
+  </div>
+
+  <p>Here are the only three things worth genuinely testing in an interview:</p>
+
+  <ul class="check-list">
+    <li><strong>How they think</strong> — give them a real, messy problem from your actual business. Watch the process, not the answer.</li>
+    <li><strong>How they disagree</strong> — tell them something slightly wrong. See if they correct you or nod along.</li>
+    <li><strong>How they handle ambiguity</strong> — give deliberately incomplete information and see what questions they ask before acting.</li>
+  </ul>
+
+  <h3>The Red Flag / Green Flag Playbook</h3>
+
+  <div class="flag-grid">
+    <div class="flag-box red">
+      <div class="flag-title">🚩 Red Flags</div>
+      <ul>
+        <li>Uses "we" for everything they did solo</li>
+        <li>Can't name a decision they regret</li>
+        <li>Hasn't asked you a single hard question</li>
+        <li>Their goals are suspiciously aligned with your JD</li>
+        <li>References are all former managers who now love them from a distance</li>
+        <li>Says "I'm a people person" unprompted</li>
+        <li>No opinions on anything</li>
+        <li>Jumps to solution before understanding problem</li>
+      </ul>
+    </div>
+    <div class="flag-box green">
+      <div class="flag-title">Green Flags</div>
+      <ul>
+        <li>Tells you about a time they were wrong</li>
+        <li>Asks about your biggest current problem</li>
+        <li>Has a side project that went nowhere — and learned from it</li>
+        <li>Can explain complex things simply</li>
+        <li>Pushes back on the job spec thoughtfully</li>
+        <li>Has done research you didn't expect</li>
+        <li>References call you back immediately</li>
+        <li>Asks about the team, not just the role</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The 48-Hour Work Trial</h3>
+  <p>The single highest-signal move you can make: pay them for two days of real work before you decide. Give them an actual problem. Set them loose. Watch how they communicate, ask questions, manage time, and deliver.</p>
+
+  <p>Most candidates will love this. The ones who don't — that tells you something too.</p>
+
+  <div class="callout green">
+    <strong>The Referral Rule</strong>
+    <p>The best hire you'll ever make is someone a current team member recruited from their own network. Build a referral culture from day one. Your team's professional network is your best recruiting pipeline — and it's free.</p>
+  </div>
+</div>
+
+<!-- ══════════════ CHAPTER 4 ══════════════ -->
+<div class="ch-divider" style="background: var(--coral);">
+  <div class="num">04</div>
+  <div class="label">Chapter Four</div>
+  <h2>Culture<br>Isn't<br>Ping Pong</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 04 — Real Culture</div>
+  <h2>What Culture<br>Actually<br><span class="accent-r">Means</span></h2>
+
+  <p>Culture is not the playlist on Friday afternoons. It's not the team retreat in Lisbon or the WFH policy or the unlimited PTO that nobody uses. Those are symptoms of culture, not culture itself.</p>
+
+  <p>Culture is what people do when nobody's watching. It's what decisions get made at 10pm when the founder is on a flight. It's what your team tells their friends about working there.</p>
+
+  <div class="callout">
+    <strong>The Real Definition</strong>
+    <p>Culture is the behavioral operating system of your company. It runs in the background of every conversation, decision, conflict, and celebration.</p>
+  </div>
+
+  <h3>You Set It, Whether You Mean To Or Not</h3>
+  <p>This is the part that makes most founders uncomfortable: you are already building a culture. Right now. With every hire, every decision, every slack message, every time you're late to a meeting or ship something half-baked or ghost a candidate's follow-up.</p>
+
+  <p>There's no "we'll define our culture later." You're defining it constantly, by default. The only question is whether it's intentional.</p>
+
+  <h3>The 3 Culture Levers That Actually Matter</h3>
+
+  <ul class="check-list">
+    <li><strong>Who you promote.</strong> Whatever behavior gets rewarded defines what everyone will do. If you promote the person who worked 80-hour weeks over the person who delivered 3x more in 40 hours — that message lands.</li>
+    <li><strong>Who you tolerate.</strong> The brilliant asshole. The quiet underperformer. The person who's technically great but subtly undermines others. Every day you keep them is a policy statement.</li>
+    <li><strong>How you handle failure.</strong> If people hide failures from you, your culture is broken. The safest companies are the ones where bad news travels fast.</li>
+  </ul>
+
+  <div class="callout yellow">
+    <strong>The Founder's Mirror</strong>
+    <p>Your team's culture is a reflection of your own behavior, repeated and amplified. If there's something about your culture you don't like — check yourself first.</p>
+  </div>
+
+  <h3>Rituals > Perks</h3>
+  <p>Startups that build strong cultures do it through repetition. A weekly 15-minute "what did we ship / what did we learn" ritual is worth more than a quarterly offsite. A recurring Slack channel called #wins-and-fails does more culture work than any values document ever written.</p>
+
+  <p>Design rituals. Keep them short. Make them honest. Watch your culture solidify.</p>
+</div>
+
+<!-- ══════════════ CHAPTER 5 ══════════════ -->
+<div class="ch-divider" style="background: #00FF9D;">
+  <div class="num">05</div>
+  <div class="label">Chapter Five</div>
+  <h2 style="color: #0D1020;">Remote,<br>Hybrid,<br>In-Person?</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 05 — How You Work</div>
+  <h2>The Great<br><span class="accent-g">Work Setup</span><br>Debate</h2>
+
+  <p>Hot take: the remote vs. in-person debate is mostly a distraction from the real question, which is <em>how do you build trust and momentum at speed</em>?</p>
+
+  <p>I've built teams across Sydney, New York, Prague, Zurich, and Berlin. Here's what I actually know:</p>
+
+  <ul class="check-list">
+    <li><strong>Colocated early-stage teams move faster.</strong> The informal conversations, the whiteboard sessions, the overhearing — it compounds. Especially in the first 12 months.</li>
+    <li><strong>But forcing the wrong people to commute is stupid.</strong> If your best candidate is in Amsterdam and you're in Vienna — that's a remote hire. Deal with it. Tools exist.</li>
+    <li><strong>Hybrid without intention is just expensive confusion.</strong> If you're going hybrid, design it — don't let it default into "people come in when they feel like it."</li>
+  </ul>
+
+  <div class="callout">
+    <strong>The WeWork Philosophy</strong>
+    <p>One of the underrated things about coworking is collisions. You bump into someone from a different company and your next partnership, hire, or investor walks through that door. Design for collisions.</p>
+  </div>
+
+  <h3>The Async-First Shift</h3>
+  <p>Whatever your setup — build the async muscle early. Document decisions. Write things down. Over-communicate in writing. Teams that communicate in writing make better decisions, because writing forces clarity. Plus, your future self will thank you when you have 30 people and need institutional memory.</p>
+
+  <p>Tools I've used that actually work: <span class="mono">Notion</span> for knowledge, <span class="mono">Loom</span> for async video, <span class="mono">Linear</span> for shipping, <span class="mono">Slack</span> with strict channel discipline. None of these matter without the discipline to actually use them correctly.</p>
+</div>
+
+<!-- ══════════════ CHAPTER 6 ══════════════ -->
+<div class="ch-divider" style="background: var(--navy); border-top: 3px solid var(--cyan);">
+  <div class="num" style="color: rgba(255,255,255,0.06);">06</div>
+  <div class="label" style="color: var(--cyan);">Chapter Six</div>
+  <h2 style="color: var(--white);">The Hard<br>Conversation<br>You're Avoiding</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 06 — Letting Go</div>
+  <h2>Firing<br>Is An Act<br><span class="accent">Of Respect</span></h2>
+
+  <p>Nobody wants to talk about this part. But it's the most important chapter in the book.</p>
+
+  <p>Every founder I've ever worked with — across MedTech, SaaS, consumer, deep tech — has made the same mistake: they kept someone too long. Someone who was right for an earlier stage but wrong for where you are now. Someone who was technically competent but quietly corrosive to culture. Someone they liked too much to be honest with.</p>
+
+  <p>Keeping the wrong person is not kindness. It's avoidance. And it costs everyone — including them.</p>
+
+  <div class="callout coral">
+    <strong>The 3-Month Rule</strong>
+    <p>If you've thought "we might need to let this person go" more than three times in one month — the answer is yes, you do. Your gut has already decided. You're just waiting for permission.</p>
+  </div>
+
+  <h3>How To Do It Like A Human Being</h3>
+  <p>Be direct. Be specific. Be kind. Don't dress it up in so much softer language that the person leaves confused about what happened.</p>
+
+  <ul class="check-list">
+    <li>Have the conversation in person (or video — not Slack)</li>
+    <li>Give one clear reason, not a list of 15 grievances</li>
+    <li>Be fair on severance — it's the right thing and it's good for your reputation</li>
+    <li>Do it early in the week, not Friday afternoon</li>
+    <li>Don't make them clear out their desk in front of colleagues</li>
+  </ul>
+
+  <div class="callout green">
+    <strong>The Long Game</strong>
+    <p>The people you let go will talk about how you did it. Startup ecosystems are small. Handle this with class and people will respect you for it — including future candidates.</p>
+  </div>
+
+  <h3>The Graduation Frame</h3>
+  <p>The best founders I know think about this as a graduation, not a failure. Some people are exactly right for the 0-to-1 phase and wrong for 1-to-10. That's not a character flaw — it's just stage fit. Celebrate what they built with you, and let them move to the next thing that's right for them.</p>
+</div>
+
+<!-- ══════════════ CHAPTER 7 ══════════════ -->
+<div class="ch-divider" style="background: var(--purple);">
+  <div class="num">07</div>
+  <div class="label">Chapter Seven</div>
+  <h2>Scale<br>Without<br>Losing the Plot</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 07 — Growth Phase</div>
+  <h2>From 5 to 50:<br><span class="accent-p">The Culture</span><br><span class="accent-p">Inflection Point</span></h2>
+
+  <p>Something happens when you get to around 25–30 people. The founder stops knowing everyone's coffee order. You miss a birthday. Someone makes a decision that you'd have made differently and you only find out about it three weeks later.</p>
+
+  <p>This is the inflection point. And how you handle it determines whether you build something that outlasts you — or whether you build a company that needs you in every room for it to function.</p>
+
+  <h3>From Founder-Led to Culture-Led</h3>
+  <p>The single biggest shift you need to make: stop being the culture. Start being the gardener of the culture. You can't carry it alone past 20 people. It needs to live in the team.</p>
+
+  <div class="callout">
+    <strong>The Delegation Paradox</strong>
+    <p>Founders often delegate tasks but not authority. That's not delegation — that's outsourced doing. Real delegation means handing someone a problem and trusting them to define the solution, not just execute yours.</p>
+  </div>
+
+  <h3>Building the Leadership Layer</h3>
+  <p>By the time you hit 30 people, you need a leadership layer that can function independently. Not managers who escalate everything. Leaders who escalate almost nothing — because they've internalized the company's values and judgment framework well enough to decide for themselves.</p>
+
+  <p>This means: hire leaders early, invest in them deeply, and give them real authority before they need it. Don't wait until you're overwhelmed. That's too late.</p>
+
+  <h3>The 5 Things That Break When You Scale</h3>
+
+  <ul class="check-list">
+    <li><strong>Communication</strong> — information stops flowing naturally, silos emerge</li>
+    <li><strong>Decision speed</strong> — too many people in too many meetings about too many things</li>
+    <li><strong>Talent bar</strong> — the urgency to fill roles drives down quality</li>
+    <li><strong>Culture clarity</strong> — original values dilute as new people arrive and interpret them differently</li>
+    <li><strong>Founder energy</strong> — you're running on fumes and can't see the team clearly anymore</li>
+  </ul>
+
+  <div class="callout yellow">
+    <strong>The Fix</strong>
+    <p>Document your culture explicitly before you hit 15 people. Not aspirational values on a wall. Real documented behaviors: how you make decisions, how you handle conflict, what "good" looks like at each function. Then hire people to that document.</p>
+  </div>
+</div>
+
+<!-- ══════════════ CHAPTER 8 ══════════════ -->
+<div class="ch-divider" style="background: var(--cyan);">
+  <div class="num">08</div>
+  <div class="label">Chapter Eight</div>
+  <h2>The Team<br>That Wins</h2>
+</div>
+
+<div class="section">
+  <div class="chapter-label">Chapter 08 — The Endgame</div>
+  <h2>What Does<br><span class="accent">"Winning"</span><br>Actually Look Like?</h2>
+
+  <p>Here's the thing about great teams: you feel them before you can measure them. There's a specific energy in a room where everyone trusts each other, argues productively, and leaves energized instead of drained.</p>
+
+  <p>It's not effortless. It's built. Deliberately. Over time. With consistent decisions about who to bring in, who to elevate, and who to let go.</p>
+
+  <div class="callout green">
+    <strong>The Winning Team Checklist</strong>
+    <p>People disagree openly and don't hold grudges. Bad news travels fast. Wins are shared, not hoarded. Nobody is irreplaceable in a way that creates risk. New people raise the average.</p>
+  </div>
+
+  <h3>The Ultimate Team Test</h3>
+  <p>Here's the test I use with every team I've ever advised. Answer honestly:</p>
+
+  <ul class="check-list">
+    <li>If you disappeared for 3 weeks, would the team perform better, worse, or the same?</li>
+    <li>Do people on your team regularly bring you problems you didn't know existed?</li>
+    <li>Is there someone on your team right now who's smarter than you in at least one critical area?</li>
+    <li>Do people argue with you and then fully commit to the outcome even when you disagree?</li>
+    <li>Would your current team refer their best friend to work here?</li>
+  </ul>
+
+  <p>If you answered yes to four or five of those: you're doing it right. Keep going.</p>
+  <p>If you answered yes to two or fewer: you have a culture emergency. Don't wait to address it.</p>
+
+  <h3>One Last Thing</h3>
+  <p>Building a startup team that gives a shit is the most important thing you'll do in your company's first three years. Not the fundraise. Not the product launch. Not the press hit.</p>
+
+  <p>The people. Always the people.</p>
+
+  <p>Get that right, and almost everything else becomes a problem you can solve. Get it wrong, and no amount of funding, product insight, or market timing will save you.</p>
+
+  <div class="callout">
+    <strong>The closing thought</strong>
+    <p>"Hire leaders, not followers. Then get out of their way. That's the whole playbook."</p>
+  </div>
+
+  <div class="wework-stamp" style="margin-top: 40px;">
+    <div class="dot"></div>
+    N.J. Berky — njb-berky.com — Written at WeWork, somewhere between Prague and Zurich
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-title">N.J. BERKY</div>
+  <p>Healthcare Venture Architect. MedTech Strategist. Startup Advisor.</p>
+  <p style="margin-top: 8px;"><a href="https://njb-berky.com">njb-berky.com</a> &nbsp;·&nbsp; <a href="https://tools.njb-berky.com">Startup Navigator</a> &nbsp;·&nbsp; <a href="https://calendly.com/nathaniel-lukas-jonathan-berky/30min">Book a Call</a></p>
+  <p style="margin-top: 24px; font-size: 11px; opacity: 0.25;">© N.J. Berky Advisory | IČO: 75528240 | All rights reserved.</p>
+</footer>
+
+</body>
+</html>
